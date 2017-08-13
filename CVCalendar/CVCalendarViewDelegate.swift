@@ -18,6 +18,7 @@ public protocol CVCalendarViewDelegate {
     */
     @objc optional func shouldAnimateResizing() -> Bool
     @objc optional func toggleDateAnimationDuration() -> Double
+	@objc optional func resizeAnimationTo(height: CGFloat) -> Void
 
     @objc optional func shouldScrollOnOutDayViewSelection() -> Bool
     @objc optional func shouldAutoSelectDayOnWeekChange() -> Bool

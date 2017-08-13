@@ -231,6 +231,7 @@ extension CVCalendarContentViewController {
                         UIView.animate(withDuration: 0.2, delay: 0,
                                                    options: UIViewAnimationOptions.curveLinear,
                                                    animations: { [weak self] in
+							self?.calendarView.delegate?.resizeAnimationTo?(height: height)
                             self?.layoutViews(viewsToLayout, toHeight: height)
                         }) { [weak self] _ in
                             guard let strongSelf = self else {
